@@ -24,7 +24,7 @@ class StoreProjectRequest extends FormRequest
         return [
             'title' => ['required', 'min:3'],
             'description' => ['required'],
-            'technologies' => 'required|in:HTML,CSS,JavaScript,VUE.js,PHP,Laravel',
+            'type_id' => ['nullable'],
         ];
     }
 
@@ -39,8 +39,6 @@ class StoreProjectRequest extends FormRequest
             'title.required' => 'Il titolo non può essere vuoto',
             'title.min' =>  'Il titolo non può essere minore di tre caratteri',
             'description.required' => 'La descrizione è richiesta',
-            'technologies.required' => 'Seleziona la tecnologia',
-            'technologies.in' => 'Seleziona la tecnologia',
         ];
     }
 }

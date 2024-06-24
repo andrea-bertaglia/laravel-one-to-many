@@ -25,7 +25,7 @@ class UpdateProjectRequest extends FormRequest
         return [
             'title' => ['required', 'min:3', Rule::unique('projects')->ignore($this->project)],
             'description' => ['required'],
-            'technologies' => 'required|in:HTML,CSS,JavaScript,VUE.js,PHP,Laravel'
+            'type_id' => ['nullable'],
         ];
     }
 
@@ -40,8 +40,6 @@ class UpdateProjectRequest extends FormRequest
             'title.required' => 'Il titolo non può essere vuoto',
             'title.min' =>  'Il titolo non può essere minore di tre caratteri',
             'description.required' => 'La descrizione è richiesta',
-            'technologies.required' => 'Seleziona la tecnologia',
-            'technologies.in' => 'Seleziona la tecnologia',
         ];
     }
 }

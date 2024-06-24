@@ -49,27 +49,19 @@
                         @enderror"
                             id="link" aria-describedby="link" name="link" value="{{ old('link', $project->link) }}">
                     </div> --}}
-                    {{-- <div class="mt-3">
-                        <label for="technologies" class="form-label fw-bold">Tecnologie</label>
-                        <select
-                            class="form-select @error('technologies')
-                            is-invalid
-                        @enderror"
-                            aria-label="Technlogies" id="technologies" name="technologies">
+                    <div class="mb-3">
+                        <label for="type_id" class="form-label fw-bold">Tipo</label>
+                        <select class="form-select @error('type_id') is-invalid @enderror" id="type_id" name="type_id">
                             <option>Seleziona un'opzione</option>
-                            <option @selected(old('technologies', $project->technologies) === 'HTML') value="HTML">HTML</option>
-                            <option @selected(old('technologies', $project->technologies) === 'CSS') value="CSS">CSS</option>
-                            <option @selected(old('technologies', $project->technologies) === 'JavaScript') value="JavaScript">JavaScript</option>
-                            <option @selected(old('technologies', $project->technologies) === 'VUE.js') value="VUE.js">VUE.js</option>
-                            <option @selected(old('technologies', $project->technologies) === 'PHP') value="PHP">PHP</option>
-                            <option @selected(old('technologies', $project->technologies) === 'Laravel') value="Laravel">Laravel</option>
+                            @foreach ($types as $type)
+                                <option @selected($project->type?->id === $type->id) value="{{ $type->id }}">{{ $type->name }}
+                                </option>
+                            @endforeach
                         </select>
-                        @error('technologies')
-                            <div id="technologies-error" class="invalid-feedback">
-                                {{ $message }}
-                            </div>
+                        @error('types')
+                            <div id="types-error" class="invalid-feedback">{{ $message }}</div>
                         @enderror
-                    </div> --}}
+                    </div>
                 </div>
                 <div class="col-6">
                     <div class="mb-3">
