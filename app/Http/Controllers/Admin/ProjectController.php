@@ -37,7 +37,7 @@ class ProjectController extends Controller
      */
     public function store(AdminStoreProjectRequest $request)
     {
-        $data = $request->all();
+        $data = $request->validated();
         $newProject = new Project();
         $newProject->slug = Str::slug($request->title);
         if ($request->hasFile('thumb')) {

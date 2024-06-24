@@ -24,7 +24,7 @@ class StoreProjectRequest extends FormRequest
         return [
             'title' => ['required', 'min:3'],
             'description' => ['required'],
-            'type_id' => ['nullable'],
+            'type_id' => 'required',
         ];
     }
 
@@ -39,6 +39,8 @@ class StoreProjectRequest extends FormRequest
             'title.required' => 'Il titolo non può essere vuoto',
             'title.min' =>  'Il titolo non può essere minore di tre caratteri',
             'description.required' => 'La descrizione è richiesta',
+            'type_id.required' => 'Il tipo è richiesto'
+
         ];
     }
 }
