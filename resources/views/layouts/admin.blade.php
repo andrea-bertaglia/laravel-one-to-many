@@ -74,7 +74,14 @@
                                 <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.projects.create' ? 'bg-secondary' : '' }}"
                                     href="{{ route('admin.projects.create') }}"><i
                                         class="fa-solid fa-plus fa-lg fa-fw"></i>
-                                    Aggiungi nuovo
+                                    Aggiungi Progetto
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.types.index' ? 'bg-secondary' : '' }}"
+                                    href="{{ route('admin.types.index') }}"><i
+                                        class="fa-solid fa-check fa-lg fa-fw"></i>
+                                    Gestione Tipo
                                 </a>
                             </li>
                         </ul>

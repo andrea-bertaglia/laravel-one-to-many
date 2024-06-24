@@ -1,7 +1,5 @@
 @extends('layouts.admin')
 
-@section('title', 'Aggiungi un nuovo progetto')
-
 @section('content')
     <div class="container">
         <h1 class="py-3 fw-bold">Aggiungi un nuovo progetto</h1>
@@ -67,5 +65,4 @@
             <button type="submit" class="btn btn-success mt-5 pe-3">Salva</button>
         </form>
     </div>
-
 @endsection
