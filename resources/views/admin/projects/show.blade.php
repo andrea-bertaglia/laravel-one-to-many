@@ -15,10 +15,14 @@
                 <p>{{ $project->description }}</p>
                 {{-- <dd>Link</dd> --}}
                 {{-- <dt class="pb-4">{{ $project->link }}</dt> --}}
-                {{-- <dd>Tecnologia</dd>
-                <dt class="pb-4">{{ $project->technologies }}</dt> --}}
                 <dd>Slug</dd>
                 <dt>{{ $project->slug }}</dt>
+                <div class="pt-3">
+                    <span class="pe-2">Tipo</span>
+                    <span class="badge rounded-pill"
+                        style="background-color:{{ $project->type?->color }}">{{ $project->type?->name }}</span>
+                </div>
+
             </div>
         </div>
     </div>
