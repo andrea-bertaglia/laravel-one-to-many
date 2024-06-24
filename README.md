@@ -21,4 +21,3 @@ creare il seeder per il model Type.
 ### Bonus 2:
 
 aggiungere le operazioni CRUD per il model Type, in modo da gestire le tipologie di progetto direttamente dal pannello di amministrazione.
-s
